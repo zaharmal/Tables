@@ -65,4 +65,57 @@
   }
 }
 
+.footer {
+  padding: 26px 0 16px;
+  background-color: $bg;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__subtitle {
+    padding-top: 21px;
+  }
+  &__menu + .footer__menu {
+    margin-left: 92px;
+  }
+  &__menu {
+    @extend %roboto-400;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__phone {
+    padding-bottom: 8px;
+    @extend %oswald-300;
+    font-size: 14px;
+    line-height: 21px;
+    color: $text;
+  }
+  &__copy {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__copy-link {
+    width: 230px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-decoration: underline;
+    @extend %roboto-400;
+    font-size: 12px;
+    line-height: 14px;
+    color: $text;
+  }
+  &__copy-author {
+    @extend %roboto-300;
+    font-size: 14px;
+    line-height: 16px;
+    &__link {
+      color: $text;
+      text-decoration: underline;
+    }
+  }
+}
+
 @import 'media';
