@@ -4,6 +4,65 @@
 @import 'libs';
 @import 'global';
 
+.header {
+  padding: 45px 0;
+  background-color: $bg;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__subtitle {
+    @extend %roboto-400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+  }
+}
 
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item + .menu__list-item {
+    margin-left: 75px;
+  }
+  &__list-link {
+    @extend %roboto-500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__item + .user-nav__item {
+    margin-left: 55px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    @extend %roboto-500;
+    img {
+      margin-right: 5px;
+    }
+  }
+  &__phone {
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+  }
+  &__btn {
+    background-color: $accent;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 45px;
+    border: none;
+    @extend %oswald-300;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
 
 @import 'media';
